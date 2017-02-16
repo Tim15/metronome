@@ -55,12 +55,12 @@ function scheduleNote( beatNumber, time ) {
     // create an oscillator
     var osc = audioContext.createOscillator();
     osc.connect( audioContext.destination );
-    if (beatNumber % 16 === 0)    // beat 0 == high pitch
-        osc.frequency.value = 880.0;
-    else if (beatNumber % 4 === 0 )    // quarter notes = medium pitch
+    //if (beatNumber % 16 === 0)    // beat 0 == high pitch
+    //    osc.frequency.value = 880.0;
+    //else if (beatNumber % 4 === 0 )    // quarter notes = medium pitch
         osc.frequency.value = 440.0;
-    else                        // other 16th notes = low pitch
-        osc.frequency.value = 220.0;
+    //else                        // other 16th notes = low pitch
+    //    osc.frequency.value = 220.0;
 
     osc.start( time );
     osc.stop( time + noteLength );
